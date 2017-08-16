@@ -1,0 +1,3548 @@
+/*
+Theme Name: BookPhoneCall Theme
+Theme URI: 
+Description: Custom WordPress theme by e3ve
+Version: 1.0
+Author: e3ve
+Author URI: http://www.e3ve.com
+Tags: 
+
+*/
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+/*.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	background: #ccc none repeat scroll 0 0;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#inner-wrapper {
+	clear: both;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 310px;
+}
+#home-content #inner-wrapper {
+    background: #fff none repeat scroll 0 0;
+    padding: 5px;
+}
+#header-banner {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+#home-intro {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-date {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-arrow-1 {
+	clear: none;
+	float: left;
+	margin-left: 4.1666%;
+	width: 100%;
+}
+#home-time {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content-inner {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+}*/
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+/*@media only screen and (min-width: 480px) {
+.gridContainer {
+	background: #ccc none repeat scroll 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#inner-wrapper {
+	clear: both;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 460px;
+}
+#home-content #inner-wrapper {
+    background: #fff none repeat scroll 0 0;
+    padding: 10px;
+}
+#header-banner {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+#home-intro {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-date {
+	clear: none;
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+}
+#home-arrow-1 {
+	clear: none;
+	float: left;
+	margin-left: 2.5641%;
+	width: 100%;
+}
+#home-time {
+	clear: none;
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+}
+#home-content-inner {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+}
+}*/
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+/*@media only screen and (min-width: 768px) {
+.gridContainer {
+	background: #ccc none repeat scroll 0 0;
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#inner-wrapper {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 614px;
+	display: block;
+	padding:20px 0;
+	overflow:hidden;
+}
+#header-banner {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 750px;
+	height:100px;
+	display: block;
+}
+#home-intro {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-date {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-arrow-1 {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 18.3673%;
+}
+#home-time {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content-inner {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+}
+}*/
+
+/*@media only screen and (min-width: 980px) {
+.gridContainer {
+	background: #ccc none repeat scroll 0 0;
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#inner-wrapper {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 783px;
+	display: block;
+	padding:20px 0;
+	overflow:hidden;
+}
+#home-content #inner-wrapper {
+    background: #fff none repeat scroll 0 0;
+    padding: 20px;
+}
+#header-banner {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 750px;
+	height:100px;
+	display: block;
+}
+#home-intro {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-date {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 38.7755%;
+	display: block;
+}
+#home-arrow-1 {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 18.3673%;
+}
+#home-time {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 38.7755%;
+	display: block;
+}
+#home-content-inner {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+}
+}*/
+
+/*@media only screen and (min-width: 1024px) {
+.gridContainer {
+	background: #ccc none repeat scroll 0 0;
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#inner-wrapper {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 820px;
+	display: block;
+	padding:20px 0;
+	overflow:hidden;
+}
+#home-content #inner-wrapper {
+    background: #fff none repeat scroll 0 0;
+    padding: 20px;
+}
+#header-banner {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 750px;
+	height:100px;
+	display: block;
+}
+#home-intro {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-date {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 38.7755%;
+	display: block;
+}
+#home-arrow-1 {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 18.3673%;
+}
+#home-time {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 38.7755%;
+	display: block;
+}
+#home-content-inner {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+}
+}*/
+
+/*@media only screen and (min-width: 1280px) {*/
+body {
+	background: #f5f5f5 none repeat scroll 0 0 !important;
+}
+.gridContainer {
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+#header {
+	clear: both;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 1064px;
+	padding: 0;
+}
+#home-content {
+	clear: both;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 1064px;
+}
+#footer {
+	clear: both;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 1024px;
+}
+#header #inner-wrapper {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 1064px;
+	display: block;
+	padding:0;
+	overflow:hidden;
+}
+#inner-wrapper {
+	clear: both;
+	float: none;
+	margin: 0 auto;
+	width: 1024px;
+	display: block;
+	padding:0;
+	overflow:hidden;;
+}
+
+#home-content #inner-wrapper {
+    padding: 20px 20px 70px;
+}
+#header-banner {
+	clear: both;
+    display: block;
+    float: left;
+    height: 100px;
+    margin: 0 auto;
+    width: 811px;
+}
+#header-banner img {
+	color: #ffffff;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.header-right {
+	background-color: transparent;
+    color: #ffffff;
+    display: inline-block;
+    float: left;
+    margin-left: 0;
+    padding: 9px;
+    width: 235px;
+}
+.header-right p {
+	font-weight: bold;
+    margin: 0 auto;
+}
+.header-right-bullets {
+	display: flex;
+    position: relative;
+}
+.header-right-bullets ul {
+	float: left;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 65%;
+}
+.header-right-bullets ul li {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png) no-repeat scroll left center;
+    padding-left: 20px;
+}
+.header-right-btn {
+	bottom: 0;
+    float: left;
+    position: absolute;
+    right: 11px;
+    text-align: left;
+    width: 30%;
+}
+.header-right-btn a {
+	color: #06e !important;
+    font-weight: bold;
+}
+.header-right-btn a:hover {
+	color:#ffffff !important;
+}
+#home-intro {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#home-date {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 38.7755%;
+	display: block;
+}
+#home-arrow-1 {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 18.3673%;
+}
+#home-time {
+	clear: none;
+	float: left;
+	margin-left: 2.0408%;
+	width: 38.7755%;
+	display: block;
+}
+#home-content-inner {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+}
+/*}*/
+
+
+@font-face {
+    font-family: HeadingFont;
+    src:url(fonts/Oswald-Regular.ttf);
+}
+@font-face {
+	font-family: HeadingFontLight;
+	src:url(fonts/Oswald-Light.ttf);
+}
+#header {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/Book-Phone-Call-header-image.png) repeat scroll 0 0;
+    border-bottom: 5px solid #464646;
+}
+#home-content {
+	background: #ffffff none repeat scroll 0 0;
+}
+#footer {
+	background: #181818 none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    position: relative;
+    right: 0;
+    width: 1064px;
+}
+#e3ve-footer-inner {
+	width: 1064px;
+	padding:
+}
+.footer-nav {
+	border-bottom: 1px solid;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+}
+.fbg {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/footer-bg.png) no-repeat scroll 0 0;
+    padding: 10px;
+}
+.footer-nav ul {
+	display: block;
+    float: left;
+    font-size: 11px;
+    list-style: outside none none;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%;
+}
+.footer-nav ul li {
+	display: table-cell;
+	position:relative;
+	width: 137px;
+}
+.footer-nav ul li a {
+	color: #8c8c8c;
+    text-decoration: none;
+	transition:all 0.3s;
+}
+.footer-nav ul li a:hover {
+	color: #f5f5f5;
+}
+.footer-nav ul li a + .hover-arrow {
+	border-bottom: 5px solid #f5f5f5;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: -20px;
+    height: 0;
+    left: 50%;
+    margin: 0 auto 0 -5px;
+    position: absolute;
+    width: 0;
+	opacity:0;
+	transition: all 0.1s;
+}
+.footer-nav ul li a:hover + .hover-arrow {
+	bottom: -10px;
+	opacity:1;
+}
+.footer-app-img {
+	margin: 0 auto 10px;
+    overflow: hidden;
+    width: 314px;
+}
+.apple-app-icon {
+	float: left;
+    width: 166px;
+}
+.apple-app-icon a {
+	display:block;
+}
+.android-app-icon {
+	float: left;
+    margin-left: 5px;
+    width: 143px;
+}
+.android-app-icon a {
+	display:block;
+}
+.footer-info {
+	text-align: center;
+}
+.footer-info p {
+	color: #f5f5f5;
+    font-size: 11px;
+    margin: 0;
+    text-shadow: 0 1px 1px #000;
+}
+#header-banner {
+	background: transparent none repeat scroll 0 0;
+    display: flex;
+    padding: 10px 0;
+    text-align: center;
+}
+.hb-1 {
+	display: none;
+    float: left;
+    margin: 0 0 0 2%;
+    width: 14%;
+}
+.hb-1 img {
+	font-size: 12px;
+}
+.hb-2 {
+	display: none;
+    float: left;
+    margin: 0 0 0 2%;
+    padding: 25px 0;
+    width: 59%;
+}
+.hb-2 h1 {
+	color: #fff;
+    font-family: Tahoma,sans-serif;
+    font-size: 41px;
+    line-height: 29px;
+    margin: 0 auto 5px;
+    text-transform: uppercase;
+}
+.hb-2 p {
+	font-size: 15px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.hb-3 {
+	display: none;
+    float: left;
+    margin: 0 2%;
+    width: 20%;
+}
+.hb-3 p {
+	color: #7a7a7a;
+    font-weight: bold;
+    margin: 0 auto 2px;
+}
+.hb-3 a {
+	background-color: #cccccc;
+    font-size: 12px;
+}
+.hb-3 img {
+	
+}
+
+/*@media only screen and (min-width: 320px) {
+.home-step-1 {
+	display:block;
+}
+#home-intro {
+	background: #e5e5e5 none repeat scroll 0 0;
+    display: flex;
+    margin: 0 auto 20px;
+    width: 309px;
+}
+.home-table-image {
+	border-right: 1px solid #f5f5f5;
+    float: left;
+    padding: 80px 10px;
+    text-align: center;
+    width: 50px;
+}
+.home-table-description {
+	border-bottom: medium none;
+    border-right: 1px solid #f5f5f5;
+    float: left;
+    font-size: 11px;
+    width: 142px;
+}
+.home-table-business-name {
+	background: #181818 none repeat scroll 0% 0%; color: #a9a9a9; padding:5px 10px;
+}
+.home-table-business-name h2 {
+	margin:0 auto; text-transform:uppercase; font-weight:100;
+}
+.home-table-business-info {
+	padding:10px;
+}
+.home-table-business-info p {
+	margin:0 auto;
+}
+.home-table-checkbox {
+	float: left;
+    font-size: 11px;
+    padding: 10px;
+    width: 76px;
+}
+.ht-checkbox {
+	list-style:none; padding:0; margin:0 auto;
+}
+.ht-checkbox li {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
+    padding: 3px 0 3px 23px;
+}
+.ht-checkbox li:first-child {
+	border-top:none;
+}
+.ht-checkbox li:last-child {
+	border-bottom:none;
+}
+#home-arrow-1 {
+	display: none;
+    padding: 79px 0 0;
+}
+.home-time-box {
+	background:#E5E5E5; height:364px; width:100%;
+}
+.home-time-box-heading {
+	background: #181818 none repeat scroll 0 0;
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.home-time-box-heading-left {
+	float: left;
+    width: 50%;
+	padding:10px 0;
+}
+.home-time-box-heading-left h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: left !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-left h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 20px 5px 30px;
+    text-decoration: none;
+}
+.home-time-box-heading-left h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-box-heading-right {
+	float: right;
+    width: 50%;
+	padding: 10px 0;
+}
+.home-time-box-heading-right h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: right !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-right h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 30px 5px 20px;
+    text-decoration: none;
+}
+.home-time-box-heading-right h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-content {
+	padding:10px;
+}
+.e3ve-home-time {
+	display:inline-block;
+	width:100%;
+}
+.e3ve-home-time .left-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%;
+}
+.e3ve-home-time .left-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .left-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto; 
+}
+.e3ve-home-time .left-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+	transition:all 0.3s;
+}
+.e3ve-home-time .left-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .left-time li input:focus + label {
+	background: #8e8e8e url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%; margin-left:2%;
+}
+.e3ve-home-time .right-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .right-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto;
+}
+.e3ve-home-time .right-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+}
+.e3ve-home-time .right-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time li input:focus + label {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.home-step-2 {
+	min-height: 57vh; display:none;
+}
+.home-step-2-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-2-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.step-2-content-container {
+	display: block;
+}
+.home-first-request {
+	float: none;
+    width: 100%;
+}
+.home-first-request h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-first-request form {
+	margin:0 auto 20px;
+}
+.fr-btns {
+	display:inline-block; width:100%;
+}
+.fr-continue-fb-btn {
+	float:left; width:45%;
+}
+.fr-continue-btn {
+	float:left; width:45%; margin-left:10%;
+}
+.fr-continue-fb-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-fb-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.fr-continue-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-2-or {
+	display: none;
+    float: none;
+    width: 100%;
+}
+.home-step-2-or h4 {
+	font-size:50px; font-weight:100; text-align:center; margin:0 auto; height:64%; padding-top:50%;
+}
+.home-step-2-login {
+	float: none;
+    width: 100%;
+}
+.home-step-2-login-inner {
+	
+}
+.home-step-2-login-inner h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-step-2-login-inner ul {
+	padding:0; margin:0 auto 20px; list-style:none;
+}
+.home-step-2-login-inner ul li {
+	float: left;
+    margin: 0 auto 5px;
+    width: 100%;
+}
+.home-step-2-login-inner ul li input {
+	line-height: 27px;
+    width: 98%;
+}
+.home-step-2-login-inner ul li:last-child input {
+	background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+	transition:all 0.3s;
+}
+.home-step-2-login-inner ul li:last-child input:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-3 {
+	min-height: 57vh; display:none;
+}
+.home-step-3-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-3-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-3-content-container {
+	display:inline-block; width:100%;
+}
+.home-step-3-content-container h3 {
+	border-bottom:1px solid;
+}
+.home-step-3-form {
+	margin:20px auto; padding:0; list-style:none;
+}
+.home-step-3-form-wrapper {
+	display:inline-block; width:100%;
+}
+.home-step-3-form-input {
+	float: left;
+    margin-bottom: 10px;
+    width: 10%;
+}
+.home-step-3-form-label {
+	float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.home-step-4 {
+	min-height: 57vh; display:none;
+}
+.home-step-4-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-4-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-4-content-container {
+	
+}
+.ca-fields-container {
+	display: block;
+}
+.ca-fields-inner-left {
+	background: #ccc none repeat scroll 0 0;
+    float: left;
+    list-style: outside none none;
+    margin: 20px auto 0;
+    padding: 10px 2%;
+    width: 96%;
+}
+.ca-fields-inner-left h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-left li {
+	
+}
+.ca-fields-inner-right {
+	background: #ccc none repeat scroll 0 0;
+    float: left;
+    list-style: outside none none;
+    margin: 20px auto;
+    padding: 10px 2%;
+    width: 96%;
+}
+.ca-fields-inner-right h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-right li {
+	
+}
+.bpc-agreement-input {
+	float:left; clear:left; margin-right:10px;
+}
+.bpc-agreement-label {
+	float:left; margin:0 auto 10px; font-weight:bold;
+}
+.bookphonecall-btn {
+	clear:both;
+	margin: 0 auto 20px;
+}
+.bpc-btn {
+	text-transform:uppercase; padding:5px 10px; font-size:18px; background:#666666; border:none; color:#f5f5f5; transition:all 0.3s;
+}
+.bpc-btn:hover {
+	background:#858585; color:#f5f5f5;
+}
+
+/*******************Buttons******************/
+/*.proceed-btn-1 {
+	clear:both; margin:20px auto; float:right; background:#666666; color:#f5f5f5; text-transform:uppercase; padding:5px 10px; font-size:18px; cursor:pointer; transition:all 0.3s;
+}
+.proceed-btn-2 {
+	clear: both;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 89%;
+}
+.proceed-btn-3 {
+	background: #666666 none repeat scroll 0 0;
+    clear: both;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 226px;
+	float:right;
+}
+.proceed-btn-1:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-2:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-3:hover {
+	background:#8e8e8e;
+}
+}*/
+/*@media only screen and (min-width: 480px) {
+.home-step-1 {
+	display:block;
+}
+#home-intro {
+	background: #e5e5e5 none repeat scroll 0 0;
+    display: flex;
+    margin: 0 auto 20px;
+    width: 460px;
+}
+.home-table-image {
+	border-right: 1px solid #f5f5f5;
+    float: left;
+    padding: 71px 10px;
+    text-align: center;
+    width: 100px;
+}
+.home-table-description {
+	border-bottom: medium none;
+    border-right: 1px solid #f5f5f5;
+    font-size: 13px;
+    float: left;
+    width: 220px;
+}
+.home-table-business-name {
+	background: #181818 none repeat scroll 0% 0%; color: #a9a9a9; padding:5px 10px;
+}
+.home-table-business-name h2 {
+	margin:0 auto; text-transform:uppercase; font-weight:100;
+}
+.home-table-business-info {
+	padding:10px;
+}
+.home-table-business-info p {
+	margin:0 auto;
+}
+.home-table-checkbox {
+	float: left;
+    padding: 10px;
+    font-size: 13px;
+    width: 100px;
+}
+.ht-checkbox {
+	list-style:none; padding:0; margin:0 auto;
+}
+.ht-checkbox li {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
+    padding: 3px 0 3px 23px;
+}
+.ht-checkbox li:first-child {
+	border-top:none;
+}
+.ht-checkbox li:last-child {
+	border-bottom:none;
+}
+#home-arrow-1 {
+	display: none;
+    padding: 79px 0 0;
+}
+.home-time-box {
+	background:#E5E5E5; height:364px; width:100%;
+}
+.home-time-box-heading {
+	background: #181818 none repeat scroll 0 0;
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.home-time-box-heading-left {
+	float: left;
+    width: 50%;
+	padding:10px 0;
+}
+.home-time-box-heading-left h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: left !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-left h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 20px 5px 30px;
+    text-decoration: none;
+}
+.home-time-box-heading-left h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-box-heading-right {
+	float: right;
+    width: 50%;
+	padding: 10px 0;
+}
+.home-time-box-heading-right h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: right !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-right h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 30px 5px 20px;
+    text-decoration: none;
+}
+.home-time-box-heading-right h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-content {
+	padding:10px;
+}
+.e3ve-home-time {
+	display:inline-block;
+	width:100%;
+}
+.e3ve-home-time .left-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%;
+}
+.e3ve-home-time .left-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .left-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto; 
+}
+.e3ve-home-time .left-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+	transition:all 0.3s;
+}
+.e3ve-home-time .left-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .left-time li input:focus + label {
+	background: #8e8e8e url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%; margin-left:2%;
+}
+.e3ve-home-time .right-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .right-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto;
+}
+.e3ve-home-time .right-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+}
+.e3ve-home-time .right-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time li input:focus + label {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.home-step-2 {
+	min-height: 57vh; display:none;
+}
+.home-step-2-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-2-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.step-2-content-container {
+	display: block;
+}
+.home-first-request {
+	float: none;
+    width: 100%;
+}
+.home-first-request h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-first-request form {
+	margin:0 auto 20px;
+}
+.fr-btns {
+	display:inline-block; width:100%;
+}
+.fr-continue-fb-btn {
+	float:left; width:45%;
+}
+.fr-continue-btn {
+	float:left; width:45%; margin-left:10%;
+}
+.fr-continue-fb-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-fb-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.fr-continue-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-2-or {
+	display: none;
+    float: none;
+    width: 100%;
+}
+.home-step-2-or h4 {
+	font-size:50px; font-weight:100; text-align:center; margin:0 auto; height:64%; padding-top:50%;
+}
+.home-step-2-login {
+	float: none;
+    width: 100%;
+}
+.home-step-2-login-inner {
+	
+}
+.home-step-2-login-inner h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-step-2-login-inner ul {
+	padding:0; margin:0 auto 20px; list-style:none;
+}
+.home-step-2-login-inner ul li {
+	float: left;
+    margin: 0 auto 5px;
+    width: 100%;
+}
+.home-step-2-login-inner ul li input {
+	line-height: 27px;
+    width: 98%;
+}
+.home-step-2-login-inner ul li:last-child input {
+	background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+	transition:all 0.3s;
+}
+.home-step-2-login-inner ul li:last-child input:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-3 {
+	min-height: 57vh; display:none;
+}
+.home-step-3-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-3-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-3-content-container {
+	display:inline-block; width:100%;
+}
+.home-step-3-content-container h3 {
+	border-bottom:1px solid;
+}
+.home-step-3-form {
+	margin:20px auto; padding:0; list-style:none;
+}
+.home-step-3-form-wrapper {
+	display:inline-block; width:100%;
+}
+.home-step-3-form-input {
+	float: left;
+    margin-bottom: 10px;
+    width: 10%;
+}
+.home-step-3-form-label {
+	float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.home-step-4 {
+	min-height: 57vh; display:none;
+}
+.home-step-4-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-4-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-4-content-container {
+	
+}
+.ca-fields-container {
+	display: block;
+}
+.ca-fields-inner-left {
+	background: #ccc none repeat scroll 0 0;
+    float: left;
+    list-style: outside none none;
+    margin: 20px auto 0;
+    padding: 10px 2%;
+    width: 96%;
+}
+.ca-fields-inner-left h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-left li {
+	
+}
+.ca-fields-inner-right {
+	background: #ccc none repeat scroll 0 0;
+    float: left;
+    list-style: outside none none;
+    margin: 20px auto;
+    padding: 10px 2%;
+    width: 96%;
+}
+.ca-fields-inner-right h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-right li {
+	
+}
+.bpc-agreement-input {
+	float:left; clear:left; margin-right:10px;
+}
+.bpc-agreement-label {
+	float:left; margin:0 auto 10px; font-weight:bold;
+}
+.bookphonecall-btn {
+	clear:both;
+	margin: 0 auto 20px;
+}
+.bpc-btn {
+	text-transform:uppercase; padding:5px 10px; font-size:18px; background:#666666; border:none; color:#f5f5f5; transition:all 0.3s;
+}
+.bpc-btn:hover {
+	background:#858585; color:#f5f5f5;
+}*/
+
+/*******************Buttons******************/
+/*.proceed-btn-1 {
+	clear:both; margin:20px auto; float:right; background:#666666; color:#f5f5f5; text-transform:uppercase; padding:5px 10px; font-size:18px; cursor:pointer; transition:all 0.3s;
+}
+.proceed-btn-2 {
+	clear: both;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 89%;
+}
+.proceed-btn-3 {
+	background: #666666 none repeat scroll 0 0;
+    clear: both;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 226px;
+	float:right;
+}
+.proceed-btn-1:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-2:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-3:hover {
+	background:#8e8e8e;
+}
+}*/
+/*@media only screen and (min-width: 768px) {
+.home-step-1 {
+	display:block;
+}
+#home-intro {
+	background: #e6e6e6 none repeat scroll 0 0;
+    display: flex;
+    margin: 0 auto 20px;
+	width: 614px;
+}
+.home-table-image {
+	border-right: 1px solid #f5f5f5;
+    float: left;
+    padding: 63px 15px;
+    text-align: center;
+    width: 160px;
+}
+.home-table-description {
+	border-bottom: medium none;
+    border-right: 1px solid #f5f5f5;
+    font-size: 13px;
+    float: left;
+    width: 232px;
+}
+.home-table-business-name {
+	background: #181818 none repeat scroll 0% 0%; color: #a9a9a9; padding:5px 10px;
+}
+.home-table-business-name h2 {
+	margin:0 auto; text-transform:uppercase; font-weight:100;
+}
+.home-table-business-info {
+	padding:10px;
+}
+.home-table-business-info p {
+	margin:0 auto;
+}
+.home-table-checkbox {
+	float: left;
+    padding: 10px 15px;
+    font-size: 13px;
+    width: 160px;
+}
+.ht-checkbox {
+	list-style:none; padding:0; margin:0 auto;
+}
+.ht-checkbox li {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
+    padding: 3px 0 3px 23px;
+}
+.ht-checkbox li:first-child {
+	border-top:none;
+}
+.ht-checkbox li:last-child {
+	border-bottom:none;
+}
+#home-arrow-1 {
+	display: none;
+    padding: 79px 0 0;
+}
+.home-time-box {
+	background:#E5E5E5; height:364px; width:100%;
+}
+.home-time-box-heading {
+	background: #181818 none repeat scroll 0 0;
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.home-time-box-heading-left {
+	float: left;
+    width: 50%;
+	padding:10px 0;
+}
+.home-time-box-heading-left h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: left !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-left h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 20px 5px 30px;
+    text-decoration: none;
+}
+.home-time-box-heading-left h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-box-heading-right {
+	float: right;
+    width: 50%;
+	padding: 10px 0;
+}
+.home-time-box-heading-right h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: right !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-right h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 30px 5px 20px;
+    text-decoration: none;
+}
+.home-time-box-heading-right h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-content {
+	padding:10px;
+}
+.e3ve-home-time {
+	display:inline-block;
+	width:100%;
+}
+.e3ve-home-time .left-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%;
+}
+.e3ve-home-time .left-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .left-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto; 
+}
+.e3ve-home-time .left-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+	transition:all 0.3s;
+}
+.e3ve-home-time .left-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .left-time li input:focus + label {
+	background: #8e8e8e url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%; margin-left:2%;
+}
+.e3ve-home-time .right-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .right-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto;
+}
+.e3ve-home-time .right-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+}
+.e3ve-home-time .right-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time li input:focus + label {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.home-step-2 {
+	min-height: 57vh; display:none;
+}
+.home-step-2-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-2-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.step-2-content-container {
+	display: block;
+}
+.home-first-request {
+	float: none;
+    width: 100%;
+}
+.home-first-request h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-first-request form {
+	margin:0 auto 20px;
+}
+.fr-btns {
+	display:inline-block; width:100%;
+}
+.fr-continue-fb-btn {
+	float:left; width:45%;
+}
+.fr-continue-btn {
+	float:left; width:45%; margin-left:10%;
+}
+.fr-continue-fb-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-fb-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.fr-continue-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-2-or {
+	display: none;
+    float: none;
+    width: 100%;
+}
+.home-step-2-or h4 {
+	font-size:50px; font-weight:100; text-align:center; margin:0 auto; height:64%; padding-top:50%;
+}
+.home-step-2-login {
+	float: none;
+    width: 100%;
+}
+.home-step-2-login-inner {
+	
+}
+.home-step-2-login-inner h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-step-2-login-inner ul {
+	padding:0; margin:0 auto 20px; list-style:none;
+}
+.home-step-2-login-inner ul li {
+	float: left;
+    margin: 0 auto 5px;
+    width: 100%;
+}
+.home-step-2-login-inner ul li input {
+	line-height: 27px;
+    width: 98%;
+}
+.home-step-2-login-inner ul li:last-child input {
+	background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+	transition:all 0.3s;
+}
+.home-step-2-login-inner ul li:last-child input:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-3 {
+	min-height: 57vh; display:none;
+}
+.home-step-3-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-3-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-3-content-container {
+	display:inline-block; width:100%;
+}
+.home-step-3-content-container h3 {
+	border-bottom:1px solid;
+}
+.home-step-3-form {
+	margin:20px auto; padding:0; list-style:none;
+}
+.home-step-3-form-wrapper {
+	float: left;
+    margin-left: 0;
+    width: 24%;
+}
+.home-step-3-form-input {
+	float: left;
+    margin-bottom: 10px;
+    width: 10%;
+}
+.home-step-3-form-label {
+	float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.home-step-4 {
+	min-height: 57vh; display:none;
+}
+.home-step-4-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-4-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-4-content-container {
+	
+}
+.ca-fields-container {
+	display: block;
+}
+.ca-fields-inner-left {
+	background: #ccc none repeat scroll 0 0;
+    float: left;
+    list-style: outside none none;
+    margin: 20px auto 0;
+    padding: 10px 2%;
+    width: 96%;
+}
+.ca-fields-inner-left h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-left li {
+	
+}
+.ca-fields-inner-right {
+	background: #ccc none repeat scroll 0 0;
+    float: left;
+    list-style: outside none none;
+    margin: 20px auto;
+    padding: 10px 2%;
+    width: 96%;
+}
+.ca-fields-inner-right h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-right li {
+	
+}
+.bpc-agreement-input {
+	float:left; clear:left; margin-right:10px;
+}
+.bpc-agreement-label {
+	float:left; margin:0 auto 10px; font-weight:bold;
+}
+.bookphonecall-btn {
+	clear:both;
+	margin: 0 auto 20px;
+}
+.bpc-btn {
+	text-transform:uppercase; padding:5px 10px; font-size:18px; background:#666666; border:none; color:#f5f5f5; transition:all 0.3s;
+}
+.bpc-btn:hover {
+	background:#858585; color:#f5f5f5;
+}*/
+
+/*******************Buttons******************/
+/*.proceed-btn-1 {
+	clear:both; margin:20px auto; float:right; background:#666666; color:#f5f5f5; text-transform:uppercase; padding:5px 10px; font-size:18px; cursor:pointer; transition:all 0.3s;
+}
+.proceed-btn-2 {
+	clear: both;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 89%;
+}
+.proceed-btn-3 {
+	background: #666666 none repeat scroll 0 0;
+    clear: both;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 226px;
+	float:right;
+}
+.proceed-btn-1:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-2:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-3:hover {
+	background:#8e8e8e;
+}
+}*/
+/*@media only screen and (min-width: 980px) {
+.home-step-1 {
+	display:block;
+}
+#home-intro {
+	background: #e5e5e5 none repeat scroll 0 0;
+    display: flex;
+    margin: 0 auto 20px;
+    width: 783px;
+}
+.home-table-image {
+	border-right: 1px solid #f5f5f5;
+    float: left;
+    padding: 10px;
+    width: 120px;
+}
+.home-table-description {
+	border-bottom: medium none;
+    border-right: 1px solid #f5f5f5;
+    font-size: 13px;
+    float: left;
+    width: 467px;
+}
+.home-table-business-name {
+	background: #181818 none repeat scroll 0% 0%; color: #a9a9a9; padding:5px 10px;
+}
+.home-table-business-name h2 {
+	margin:0 auto; text-transform:uppercase; font-weight:100;
+}
+.home-table-business-info {
+	padding:10px;
+}
+.home-table-business-info p {
+	margin:0 auto;
+}
+.home-table-checkbox {
+	float: left;
+    padding: 10px;
+    font-size: 13px;
+    width: 154px;
+}
+.ht-checkbox {
+	list-style:none; padding:0; margin:0 auto;
+}
+.ht-checkbox li {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
+    padding: 3px 0 3px 23px;
+}
+.ht-checkbox li:first-child {
+	border-top:none;
+}
+.ht-checkbox li:last-child {
+	border-bottom:none;
+}
+#home-arrow-1 {
+	padding:200px 0 0;
+	display: block;
+}
+#home-arrow-1 img {
+	width:30%; height:auto; margin:0 auto; display:block;
+}
+.home-time-box {
+	background:#E5E5E5; height:364px; width:100%;
+}
+.home-time-box-heading {
+	background: #181818 none repeat scroll 0 0;
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.home-time-box-heading-left {
+	float: left;
+    width: 50%;
+	padding:10px 0;
+}
+.home-time-box-heading-left h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: left !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-left h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 20px 5px 30px;
+    text-decoration: none;
+}
+.home-time-box-heading-left h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-box-heading-right {
+	float: right;
+    width: 50%;
+	padding: 10px 0;
+}
+.home-time-box-heading-right h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: right !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-right h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 30px 5px 20px;
+    text-decoration: none;
+}
+.home-time-box-heading-right h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-content {
+	padding:10px;
+}
+.e3ve-home-time {
+	display:inline-block;
+	width:100%;
+}
+.e3ve-home-time .left-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%;
+}
+.e3ve-home-time .left-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .left-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto; 
+}
+.e3ve-home-time .left-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+	transition:all 0.3s;
+}
+.e3ve-home-time .left-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .left-time li input:focus + label {
+	background: #8e8e8e url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%; margin-left:2%;
+}
+.e3ve-home-time .right-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .right-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto;
+}
+.e3ve-home-time .right-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+}
+.e3ve-home-time .right-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time li input:focus + label {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.home-step-2 {
+	min-height: 57vh; display:none;
+}
+.home-step-2-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-2-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.step-2-content-container {
+	display: flex;
+}
+.home-first-request {
+	width:55%; float:left;
+}
+.home-first-request h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-first-request form {
+	margin:0 auto 20px;
+}
+.fr-btns {
+	display:inline-block; width:100%;
+}
+.fr-continue-fb-btn {
+	float:left; width:45%;
+}
+.fr-continue-btn {
+	float:left; width:45%; margin-left:10%;
+}
+.fr-continue-fb-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-fb-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.fr-continue-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-2-or {
+	width:20%; float:left; display: block;
+}
+.home-step-2-or h4 {
+	font-size:50px; font-weight:100; text-align:center; margin:0 auto; height:64%; padding-top:50%;
+}
+.home-step-2-login {
+	width:25%; float:left;
+}
+.home-step-2-login-inner {
+	
+}
+.home-step-2-login-inner h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-step-2-login-inner ul {
+	padding:0; margin:0 auto 20px; list-style:none;
+}
+.home-step-2-login-inner ul li {
+	float: left;
+    margin: 0 auto 5px;
+    width: 100%;
+}
+.home-step-2-login-inner ul li input {
+	line-height: 27px;
+    width: 98%;
+}
+.home-step-2-login-inner ul li:last-child input {
+	background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+	transition:all 0.3s;
+}
+.home-step-2-login-inner ul li:last-child input:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-3 {
+	min-height: 57vh; display:none;
+}
+.home-step-3-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-3-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-3-content-container {
+	display:inline-block; width:100%;
+}
+.home-step-3-content-container h3 {
+	border-bottom:1px solid;
+}
+.home-step-3-form {
+	margin:20px auto; padding:0; list-style:none;
+}
+.home-step-3-form-wrapper {
+	float: left;
+    margin-left: 0;
+    width: 24%;
+}
+.home-step-3-form-input {
+	float: left;
+    margin-bottom: 10px;
+    width: 10%;
+}
+.home-step-3-form-label {
+	float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.home-step-4 {
+	min-height: 57vh; display:none;
+}
+.home-step-4-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-4-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-4-content-container {
+	
+}
+.ca-fields-container {
+	display:flex;
+}
+.ca-fields-inner-left {
+	list-style:none; padding:20px 2%; margin:20px auto; float:left; width:45%; background:#ccc;
+}
+.ca-fields-inner-left h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-left li {
+	
+}
+.ca-fields-inner-right {
+	list-style:none; padding:20px 2%; margin:20px auto; float:left; width:45%; background:#ccc; margin-left:2%;
+}
+.ca-fields-inner-right h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-right li {
+	
+}
+.bpc-agreement-input {
+	float:left; clear:left; margin-right:10px;
+}
+.bpc-agreement-label {
+	float:left; margin:0 auto 10px; font-weight:bold;
+}
+.bookphonecall-btn {
+	clear:both;
+	margin: 0 auto 20px;
+}
+.bpc-btn {
+	text-transform:uppercase; padding:5px 10px; font-size:18px; background:#666666; border:none; color:#f5f5f5; transition:all 0.3s;
+}
+.bpc-btn:hover {
+	background:#858585; color:#f5f5f5;
+}*/
+
+/*******************Buttons******************/
+/*.proceed-btn-1 {
+	clear:both; margin:20px auto; float:right; background:#666666; color:#f5f5f5; text-transform:uppercase; padding:5px 10px; font-size:18px; cursor:pointer; transition:all 0.3s;
+}
+.proceed-btn-2 {
+	clear: both;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 89%;
+}
+.proceed-btn-3 {
+	background: #666666 none repeat scroll 0 0;
+    clear: both;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 226px;
+	float:right;
+}
+.proceed-btn-1:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-2:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-3:hover {
+	background:#8e8e8e;
+}
+}*/
+/*@media only screen and (min-width: 1024px) {
+.home-step-1 {
+	display:block;
+}
+#home-intro {
+	background: #e5e5e5 none repeat scroll 0 0;
+    display: flex;
+    margin: 0 auto 20px;
+    width: 819px;
+}
+.home-table-image {
+	border-right: 1px solid #f5f5f5;
+    float: left;
+    padding: 15px 10px;
+    width: 160px;
+}
+.home-table-description {
+	border-bottom: medium none;
+    border-right: 1px solid #f5f5f5;
+    font-size: 13px;
+    float: left;
+    width: 458px;
+}
+.home-table-business-name {
+	background: #181818 none repeat scroll 0% 0%; color: #a9a9a9; padding:5px 10px;
+}
+.home-table-business-name h2 {
+	margin:0 auto; text-transform:uppercase; font-weight:100;
+}
+.home-table-business-info {
+	padding:10px;
+}
+.home-table-business-info p {
+	margin:0 auto;
+}
+.home-table-checkbox {
+	float: left;
+    padding: 15px 10px;
+    font-size: 13px;
+    width: 160px;
+}
+.ht-checkbox {
+	list-style:none; padding:0; margin:0 auto;
+}
+.ht-checkbox li {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
+    padding: 3px 0 3px 23px;
+}
+.ht-checkbox li:first-child {
+	border-top:none;
+}
+.ht-checkbox li:last-child {
+	border-bottom:none;
+}
+#home-arrow-1 {
+	padding:200px 0 0;
+	display: block;
+}
+#home-arrow-1 img {
+	width:30%; height:auto; margin:0 auto; display:block;
+}
+.home-time-box {
+	background:#E5E5E5; height:364px; width:100%;
+}
+.home-time-box-heading {
+	background: #181818 none repeat scroll 0 0;
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.home-time-box-heading-left {
+	float: left;
+    width: 50%;
+	padding:10px 0;
+}
+.home-time-box-heading-left h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: left !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-left h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 20px 5px 30px;
+    text-decoration: none;
+}
+.home-time-box-heading-left h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-box-heading-right {
+	float: right;
+    width: 50%;
+	padding: 10px 0;
+}
+.home-time-box-heading-right h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: right !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-right h3 a {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 30px 5px 20px;
+    text-decoration: none;
+}
+.home-time-box-heading-right h3 a:hover {
+	background: transparent url("http://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-content {
+	padding:10px;
+}
+.e3ve-home-time {
+	display:inline-block;
+	width:100%;
+}
+.e3ve-home-time .left-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%;
+}
+.e3ve-home-time .left-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .left-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto; 
+}
+.e3ve-home-time .left-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+	transition:all 0.3s;
+}
+.e3ve-home-time .left-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .left-time li input:focus + label {
+	background: #8e8e8e url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%; margin-left:2%;
+}
+.e3ve-home-time .right-time li {
+	margin: 0 auto 10px;
+    position: relative;
+}
+.e3ve-home-time .right-time li input {
+	position:absolute; width:100%; height:40px; opacity:0; cursor:pointer; margin:0 auto;
+}
+.e3ve-home-time .right-time li label {
+	width:90%; display:block; height:20px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px;
+}
+.e3ve-home-time .right-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time li input:focus + label {
+	background: #666666 url("http://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.home-step-2 {
+	min-height: 57vh; display:none;
+}
+.home-step-2-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-2-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.step-2-content-container {
+	display: flex;
+}
+.home-first-request {
+	width:55%; float:left;
+}
+.home-first-request h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-first-request form {
+	margin:0 auto 20px;
+}
+.fr-btns {
+	display:inline-block; width:100%;
+}
+.fr-continue-fb-btn {
+	float:left; width:45%;
+}
+.fr-continue-btn {
+	float:left; width:45%; margin-left:10%;
+}
+.fr-continue-fb-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-fb-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.fr-continue-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-2-or {
+	width:20%; float:left; display: block;
+}
+.home-step-2-or h4 {
+	font-size:50px; font-weight:100; text-align:center; margin:0 auto; height:64%; padding-top:50%;
+}
+.home-step-2-login {
+	width:25%; float:left;
+}
+.home-step-2-login-inner {
+	
+}
+.home-step-2-login-inner h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-step-2-login-inner ul {
+	padding:0; margin:0 auto 20px; list-style:none;
+}
+.home-step-2-login-inner ul li {
+	float: left;
+    margin: 0 auto 5px;
+    width: 100%;
+}
+.home-step-2-login-inner ul li input {
+	line-height: 27px;
+    width: 98%;
+}
+.home-step-2-login-inner ul li:last-child input {
+	background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+	transition:all 0.3s;
+}
+.home-step-2-login-inner ul li:last-child input:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-3 {
+	min-height: 57vh; display:none;
+}
+.home-step-3-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-3-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-3-content-container {
+	display:inline-block; width:100%;
+}
+.home-step-3-content-container h3 {
+	border-bottom:1px solid;
+}
+.home-step-3-form {
+	margin:20px auto; padding:0; list-style:none;
+}
+.home-step-3-form-wrapper {
+	float: left;
+    margin-left: 0;
+    width: 24%;
+}
+.home-step-3-form-input {
+	float: left;
+    margin-bottom: 10px;
+    width: 10%;
+}
+.home-step-3-form-label {
+	float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.home-step-4 {
+	min-height: 57vh; display:none;
+}
+.home-step-4-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-4-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-4-content-container {
+	
+}
+.ca-fields-container {
+	display:flex;
+}
+.ca-fields-inner-left {
+	list-style:none; padding:20px 2%; margin:20px auto; float:left; width:45%; background:#ccc;
+}
+.ca-fields-inner-left h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-left li {
+	
+}
+.ca-fields-inner-right {
+	list-style:none; padding:20px 2%; margin:20px auto; float:left; width:45%; background:#ccc; margin-left:2%;
+}
+.ca-fields-inner-right h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-right li {
+	
+}
+.bpc-agreement-input {
+	float:left; clear:left; margin-right:10px;
+}
+.bpc-agreement-label {
+	float:left; margin:0 auto 10px; font-weight:bold;
+}
+.bookphonecall-btn {
+	clear:both;
+	margin: 0 auto 20px;
+}
+.bpc-btn {
+	text-transform:uppercase; padding:5px 10px; font-size:18px; background:#666666; border:none; color:#f5f5f5; transition:all 0.3s;
+}
+.bpc-btn:hover {
+	background:#858585; color:#f5f5f5;
+}*/
+
+/*******************Buttons******************/
+/*.proceed-btn-1 {
+	clear:both; margin:20px auto; float:right; background:#666666; color:#f5f5f5; text-transform:uppercase; padding:5px 10px; font-size:18px; cursor:pointer; transition:all 0.3s;
+}
+.proceed-btn-2 {
+	clear: both;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 89%;
+}
+.proceed-btn-3 {
+	background: #666666 none repeat scroll 0 0;
+    clear: both;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 226px;
+	float:right;
+}
+.proceed-btn-1:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-2:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-3:hover {
+	background:#8e8e8e;
+}
+}*/
+/*@media only screen and (min-width: 1280px) {*/
+.home-step-1 {
+	display:block;
+}
+#home-intro {
+	background: #e5e5e5 none repeat scroll 0 0;
+    display: flex;
+    margin: 0 auto 20px;
+    width: 1024px;
+}
+.home-table-image {
+	border-right: 1px solid #f5f5f5;
+    float: left;
+    padding: 10px;
+    width: 185px;
+}
+.home-table-description {
+	border-bottom: medium none;
+    border-right: 1px solid #f5f5f5;
+    font-size: 13px;
+    float: left;
+    width: 612px;
+}
+.home-table-business-name {
+	background: #181818 none repeat scroll 0% 0%; color: #a9a9a9; padding:5px 10px;
+}
+.home-table-business-name h2 {
+	margin:0 auto; text-transform:uppercase; font-weight:100;
+}
+.home-table-business-info {
+	padding:10px;
+}
+.home-table-business-info p {
+	margin:0 auto;
+}
+.home-table-checkbox {
+	float: left;
+    padding: 10px;
+    font-size: 13px;
+    width: 185px;
+}
+.ht-checkbox {
+	list-style:none; padding:0; margin:0 auto;
+}
+.ht-checkbox li {
+	background: transparent url("https://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #f5f5f5;
+    padding: 3px 0 3px 23px;
+}
+.ht-checkbox li:first-child {
+	border-top:none;
+}
+.ht-checkbox li:last-child {
+	border-bottom:none;
+}
+#home-arrow-1 {
+	padding:188px 0 0;
+	display: block;
+}
+#home-arrow-1 img {
+	width:30%; height:auto; margin:0 auto; display:block;
+}
+.home-time-box {
+	background: #8c8c8c none repeat scroll 0 0;
+    height: auto;
+    width: 100%;
+}
+.home-time-box-heading {
+	background: #181818 none repeat scroll 0 0;
+	overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.home-time-box-heading-left {
+	float: left;
+    width: 50%;
+	padding:10px 0;
+}
+.home-time-box-heading-left h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: left !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-left h3 a {
+	background: #666666 url("https://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 20px 5px 30px;
+    text-decoration: none;
+}
+.home-time-box-heading-left h3 a:hover {
+	background: transparent url("https://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-left.png") no-repeat scroll 14px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-box-heading-right {
+	float: right;
+    width: 50%;
+	padding: 10px 0;
+}
+.home-time-box-heading-right h3 {
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    margin: 0 auto !important;
+    padding: 5px 10px;
+    text-align: right !important;
+    text-transform: uppercase !important;
+}
+.home-time-box-heading-right h3 a {
+	background: #666666 url("https://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 5px 30px 5px 20px;
+    text-decoration: none;
+}
+.home-time-box-heading-right h3 a:hover {
+	background: transparent url("https://bookphonecall.com/wp-content/uploads/2016/12/btn-arrow-right.png") no-repeat scroll 75px 11px;
+	border:1px solid #f5f5f5;
+	color: #f5f5f5;
+}
+.home-time-content {
+	padding:10px;
+}
+.e3ve-home-time {
+	display:inline-block;
+	width:100%;
+}
+.e3ve-home-time .left-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%;
+}
+.e3ve-home-time .left-time li {
+	margin: 0 auto;
+    position: relative;
+}
+.e3ve-home-time .left-time li input {
+	position:absolute; width:100%; height: 53px; opacity:0; cursor:pointer; margin:0 auto; z-index:1;
+}
+.e3ve-home-time .left-time li label {
+    color: #f5f5f5;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 33px;
+    line-height: normal;
+    padding: 10px 5%;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    width: 90%;
+}
+.e3ve-home-time .left-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .left-time li input:focus + label {
+	background: #8e8e8e url("https://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time {
+	list-style:none; padding:0; margin:0 auto; float:left; width:49%; margin-left:2%;
+}
+.e3ve-home-time .right-time li {
+	margin: 0 auto;
+    position: relative;
+}
+.e3ve-home-time .right-time li input {
+	cursor: pointer;
+    height: 53px;
+    margin: 0 auto;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.e3ve-home-time .right-time li label {
+	width:90%; display:block; height:33px; padding:10px 5%; line-height:normal; text-align:center; background:#666666; color:#f5f5f5; font-weight:bold; font-size:14px; transition: all 0.3s ease 0s;
+}
+.e3ve-home-time .right-time li input:hover + label {
+	background:#8e8e8e none no-repeat scroll 10px center;
+}
+.e3ve-home-time .right-time li input:focus + label {
+	background: #666666 url("https://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll 10px center;
+}
+/***************************
+	  NEW Time Buttons
+***************************/
+.e3ve-home-time .left-time .e3ve-time-1 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time1.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time li input:hover + .e3ve-time-1 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time1.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .left-time li input:focus + .e3ve-time-1 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time1-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time .e3ve-time-2 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time2.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time li input:hover + .e3ve-time-2 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time2.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .right-time li input:focus + .e3ve-time-2 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time2-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time .e3ve-time-3 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time3.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time li input:hover + .e3ve-time-3 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time3.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .left-time li input:focus + .e3ve-time-3 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time3-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time .e3ve-time-4 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time4.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time li input:hover + .e3ve-time-4 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time4.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .right-time li input:focus + .e3ve-time-4 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time4-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time .e3ve-time-5 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time5.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time li input:hover + .e3ve-time-5 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time5.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .left-time li input:focus + .e3ve-time-5 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time5-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time .e3ve-time-6 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time6.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time li input:hover + .e3ve-time-6 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time6.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .right-time li input:focus + .e3ve-time-6 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time6-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time .e3ve-time-7 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time7.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time li input:hover + .e3ve-time-7 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time7.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .left-time li input:focus + .e3ve-time-7 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time7-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time .e3ve-time-8 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time8.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time li input:hover + .e3ve-time-8 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time8.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .right-time li input:focus + .e3ve-time-8 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time8-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time .e3ve-time-9 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time9.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time li input:hover + .e3ve-time-9 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time9.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .left-time li input:focus + .e3ve-time-9 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time9-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time .e3ve-time-10 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time10.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time li input:hover + .e3ve-time-10 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time10.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .right-time li input:focus + .e3ve-time-10 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time10-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time .e3ve-time-11 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time11.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .left-time li input:hover + .e3ve-time-11 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time11.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .left-time li input:focus + .e3ve-time-11 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time11-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time .e3ve-time-12 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time12.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+.e3ve-home-time .right-time li input:hover + .e3ve-time-12 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time12.png) no-repeat scroll 0 0;
+	filter: opacity(70%);
+}
+.e3ve-home-time .right-time li input:focus + .e3ve-time-12 {
+	background: transparent url(https://bookphonecall.com/wp-content/uploads/2017/01/buttons-time12-hover.png) no-repeat scroll 0 0;
+	filter: opacity(100%);
+}
+
+
+/***************************
+	NEW Time Buttons Ends
+***************************/
+
+.home-step-2 {
+	min-height: 57vh; display:none;
+}
+.home-step-2-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-2-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.step-2-content-container {
+	display: flex;
+}
+.home-first-request {
+	width:55%; float:left;
+}
+.home-first-request h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-first-request form {
+	margin:0 auto 20px;
+}
+.fr-btns {
+	display:inline-block; width:100%;
+}
+.fr-continue-fb-btn {
+	float:left; width:45%;
+}
+.fr-continue-btn {
+	float:left; width:45%; margin-left:10%;
+}
+.fr-continue-fb-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-fb-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.fr-continue-btn a {
+	padding:10px 5%; display:block; text-align:center; background:#666666; color:#f5f5f5 !important; text-decoration:none;
+}
+.fr-continue-btn a:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-2-or {
+	width:20%; float:left; display: block;
+}
+.home-step-2-or h4 {
+	font-size:50px; font-weight:100; text-align:center; margin:0 auto; height:64%; padding-top:50%;
+}
+.home-step-2-login {
+	width:25%; float:left;
+}
+.home-step-2-login-inner {
+	
+}
+.home-step-2-login-inner h3 {
+	border-bottom:1px solid; text-transform:uppercase;
+}
+.home-step-2-login-inner ul {
+	padding:0; margin:0 auto 20px; list-style:none;
+}
+.home-step-2-login-inner ul li {
+	float: left;
+    margin: 0 auto 5px;
+    width: 100%;
+}
+.home-step-2-login-inner ul li input {
+	line-height: 27px;
+    width: 98%;
+}
+.home-step-2-login-inner ul li:last-child input {
+	background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+	transition:all 0.3s;
+}
+.home-step-2-login-inner ul li:last-child input:hover {
+	background: #8e8e8e none repeat scroll 0 0;
+}
+.home-step-3 {
+	min-height: 57vh; display:none;
+}
+.home-step-3-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-3-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-3-content-container {
+	display:inline-block; width:100%;
+}
+.home-step-3-content-container h3 {
+	border-bottom:1px solid;
+}
+.home-step-3-form {
+	margin:20px auto; padding:0; list-style:none;
+}
+.home-step-3-form-wrapper {
+	float: left;
+    margin-left: 1.3%;
+    /*width: 24%;*/
+    width: 31.5%;
+}
+.home-step-3-form-wrapper:first-child {
+	float: left;
+    margin-left: 0;
+    /*width: 24%;*/
+    width: 31.5%;
+}
+.home-step-3-form-input {
+	float: left;
+    margin-bottom: 10px;
+    width: 10%;
+}
+.home-step-3-form-label {
+	float: left;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.home-step-4 {
+	min-height: 57vh; display:none;
+}
+.home-step-4-heading {
+	padding:5px 10px; background:#666666; color:#E5E5E5;
+}
+.home-step-4-heading h2 {
+	font-family: HeadingFont; text-transform:uppercase; font-weight:100; margin:0 auto;
+}
+.home-step-4-content-container {
+	
+}
+.ca-fields-container {
+	display:flex;
+}
+.ca-fields-inner-left {
+	list-style:none; padding:20px 2%; margin:20px auto; float:left; width:45%; background:#ccc;
+}
+.ca-fields-inner-left h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-left li {
+	
+}
+.ca-fields-inner-right {
+	list-style:none; padding:20px 2%; margin:20px auto; float:left; width:45%; background:#ccc; margin-left:2%;
+}
+.ca-fields-inner-right h3 {
+	border-bottom:1px solid;
+}
+.ca-fields-inner-right li {
+	
+}
+.bpc-agreement-input {
+	clear:left; margin-right:10px; text-align: center;
+}
+.bpc-agreement-label {
+	float:left; margin:0 auto 10px; font-weight:bold;
+}
+.bookphonecall-btn {
+	clear:both;
+	margin: 10px auto 20px;
+    text-align: center;}
+.bpc-btn {
+	text-transform:uppercase; padding:5px 10px; font-size:18px; background:#666666; border:none; color:#f5f5f5; transition:all 0.3s;
+}
+.bpc-btn:hover {
+	background:#858585; color:#f5f5f5;
+}
+
+/*******************Buttons******************/
+.proceed-btn-1 {
+	clear:both; margin:20px auto; float:right; background:#666666; color:#f5f5f5; text-transform:uppercase; padding:5px 10px; font-size:18px; cursor:pointer; transition:all 0.3s;
+}
+.proceed-btn-2 {
+	clear: both;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    /*width: 89%;*/
+    width: auto;
+}
+.proceed-btn-3 {
+	background: #666666 none repeat scroll 0 0;
+    clear: both;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 226px;
+	float:right;
+}
+.proceed-btn-1:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-2:hover {
+	background:#8e8e8e;
+}
+.proceed-btn-3:hover {
+	background:#8e8e8e;
+}
+/*}*/
+
+/******************Minimized Steps*******************/
+.prev-steps-wrapper {
+	display:inline-block; width:100%; border-bottom:1px solid #666666; margin-bottom: 5px;
+}
+.step-1-prev-btn {
+	background-color: transparent;
+    border: 1px solid;
+    clear: both;
+    color: #666666;
+    cursor: pointer;
+    display: block;
+    line-height: 24px;
+    margin: 0 auto 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.step-2-prev-btn {
+	background-color: transparent;
+    border: 1px solid;
+    clear: both;
+    color: #666666;
+    cursor: pointer;
+    display: block;
+    line-height: 24px;
+    margin: 0 auto 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.step-3-prev-btn {
+	background-color: transparent;
+    border: 1px solid;
+    clear: both;
+    color: #666666;
+    cursor: pointer;
+    display: block;
+    line-height: 24px;
+    margin: 0 auto 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.step-1-prev-btn:hover {
+	 color:#f5f5f5; background-color:#666666;
+}
+.step-2-prev-btn:hover {
+	color:#f5f5f5; background-color:#666666;
+}
+.step-3-prev-btn:hover {
+	color:#f5f5f5; background-color:#666666;
+}
+
+#page-content {
+	clear:both; background:#f5f5f5; min-height:450px;
+}
+.pageTitle {
+	text-transform:uppercase;
+	border-bottom:1px solid;
+}
+.small-green-tick {background:transparent url("https://bookphonecall.com/wp-content/uploads/2016/12/tick-1.png") no-repeat scroll left center; padding-left:23px; margin-bottom:10px;}
+#home-date h3 {
+	font-size:30px; text-transform:uppercase; font-weight:100; text-align:center; margin:0 auto;
+}
+#home-time h3 {
+	font-size:30px; text-transform:uppercase; font-weight:100; text-align:center; margin:0 auto;
+}
+
+#of_container .group {
+    display: block !important;
+}
+
+/***FACEBOOK BTN***/
+.fr-continue-fb-btn ._4z_b _4z_8 _4z_6 {
+	height:auto;
+}
+.fr-continue-fb-btn ._4z_b _4z_8 _4z_6 table ._51m- {
+	padding:5px 10px;
+}
+
+/***Company Name - House API***/
+.ui-helper-hidden-accessible {
+    display: none;
+}
+.ui-autocomplete-loading {
+	background:url('images/loading1.gif') no-repeat right center;
+}
+ul#ui-id-1{
+	list-style: url("images/suitcase-icon-1.png");
+	width:23%;
+	background:#fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-bottom: 10px;
+	padding-left:30px;
+	border: none;
+}
+ul#ui-id-1 li{
+	padding: 5px;
+}
+ul li#nocompany{
+	list-style: url("https://bookphonecall.com/wp-content/uploads/2017/01/icon-question.png");
+}
+.ui-menu .ui-menu-item {
+	cursor: pointer;
+	border: none;
+}
+li.ui-menu-divider.ui-widget-content {
+    display: none;
+}
+#name_container {
+	width: 65%;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+.e3ve-cl-times{
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    background: url(https://bookphonecall.com/wp-content/uploads/2017/01/time-start.png) no-repeat;
+    padding: 10px 30px 10px 35px;
+    width: 185px;
+    height: 35px;
+    display: inherit;
+    background-size: 169px 50px;
+}
+.e3ve-home-time .left-time li input:hover + span,
+.e3ve-home-time .right-time li input:hover + span  {
+    background: url(https://bookphonecall.com/wp-content/uploads/2017/01/time-hover.png) no-repeat;
+    background-size: 169px 50px;
+}
+#directordiv, #director_column {
+	width: 90%;
+}
+div#address_snippet {
+    margin-left: 40px;
+}
+.ui-datepicker-unselectable .ui-state-default {
+    background: #ffe6e6 !important;
+    color: #b4b3b3;
+}
+
+
+
+/*Custom css*/ 
+
+/********************Sicial Media*********************/
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+body {
+    font-family: 'Lato', sans-serif;
+    color: #FFF;
+    background: #322f30;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin:  1% 0 1% 0;
+}
+._12 {
+    font-size: 1.2em;
+}
+._14 {
+    font-size: 1.4em;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 10%;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    padding: 0;
+    width: 100%;
+}
+.social-icons li {
+    display: inline;
+    vertical-align: top;
+    width: 0 !important;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:11px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:11px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:11px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:11px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:11px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-google-plus {
+    padding:11px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+/********************Sicial Media*********************/
+
+
+input#user_login {
+    width: 92%;
+    padding: 8px;
+}
+input#user_pass {
+    width: 92%;
+    padding: 8px;
+}
+input#wp-submit {
+    background: #666666 none repeat scroll 0 0;
+    border: medium none;
+    color: #f5f5f5;
+    line-height: 35px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    width: 99.5%;
+    transition: all 0.3s;
+}
+input#wp-submit:hover {
+    background: #8e8e8e none repeat scroll 0 0;
+}
+p.login-remember {
+    display: none;
+}
+#datepicker .ui-datepicker tbody td.ui-datepicker-today a.ui-state-default:after {
+   content: "Today";
+   color: #ff0000;
+   font-size:7px;
+   font-weight:normal;
+   display:block;
+   margin-top:-20px;
+   margin-bottom:-10px;
+   font-family:Tahoma, Geneva, sans-serif;
+}
+#datepicker .ui-datepicker tbody td.ui-datepicker-today span.ui-state-default:after {
+   content: "Today";
+   color: #ff0000;
+   font-size:7px;
+   font-weight:normal;
+   display:block;
+   margin-top:-20px;
+   margin-bottom:-10px;
+   font-family:Tahoma, Geneva, sans-serif;
+}
